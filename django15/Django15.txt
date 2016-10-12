@@ -1,0 +1,20 @@
+- Framework baseado em Python
+- 21 July 2005 11 anos
+- Mantidos pela Django Software Foundation
+- Link do código fonte https://github.com/django/django
+- Versão atual é a 1.10
+- Pilha inteira
+- Rápido, Escalável
+- Arquitetura MTV
+	- Models (Classes de objetos e camada de acesso aos dados no BD)
+	- Views (Controllers do MTV, comunicação entre o template e o Model)
+		- URL's (Define as rotas ou seja para onde vai cada requisição)
+	- Templates (Equivalenta as views)
+
+	URL > Direciona para uma view > Model > Busca algo no Banco > Devolve um template
+
+- Baseado em aplicações
+- Administração poderosa
+	- Evitar de ter que criar áreas administrativas do site na mão
+	- A mais famosa aplicação do Django
+- Instalação
