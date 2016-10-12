@@ -3,6 +3,7 @@ from core.models import Post
 from core.forms import PostForm
 
 
+
 def home(request):
     return render(request, 'core/index.html')
 
