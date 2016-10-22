@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		function programefacil(){
+			var x = 10;
+			var y = 11;
+			var total = x + y;
+			alert('A soma e ' + total);
+		}
+
+		function incrementa(){
+			document.getElementById('progress').value += 10;
+		}
+
+		function decrementa(){
+			document.getElementById('progress').value -= 10;
+		}
+	</script>
+</head>
+<body>
+
+<form>
+	<label>Click me <input type="text" id="User" name="Name" /></label>
+
+	<input type="text" name="" onchange="programefacil()" 
+		onclick="alert('clicou')" 
+		onmouseover="alert('mouse over')">
+</form>
+
+	<p id="total"></p>
+	<progress value="70" max="100" id="progress">70 %</progress>
+	<button onclick="incrementa()">Incrementa</button>
+	<button onclick="decrementa()">Decrementa</button>
+
+	<br>
+
+	<p>Ele recebeu <meter low="83" high="80" max="100" value="84">B</meter> no exame.</p>
+
+
+	<!-- O segundo valor estará selecionado inicialmente -->
+	<select name="select">
+	  <option value="valor1">Valor 1</option> 
+	  <option value="valor2" selected>Valor 2</option>
+	  <option value="valor3">Valor 3</option>
+	</select>
+</body>
+</html>

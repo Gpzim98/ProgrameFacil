@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<!-- A context menu for a simple editor,
+	    containing two menu buttons. -->
+	<menu type="toolbar">
+	  <li>
+	    <button type="menu" menu="file-menu">File</button>
+	    <menu type="context" id="file-menu">
+	      <menuitem label="New..." onclick="newFile()">
+	      <menuitem label="Save..." onclick="saveFile()">
+	    </menu>
+	  </li>
+	  <li>
+	    <button type="menu" menu="edit-menu">Edit</button>
+	    <menu type="context" id="edit-menu">
+	      <menuitem label="Cut..." onclick="cutEdit()">
+	      <menuitem label="Copy..." onclick="copyEdit()">
+	      <menuitem label="Paste..." onclick="pasteEdit()">
+	    </menu>
+	  </li>
+	</menu>
+
+
+	<br>
+
+	<!-- A <div> element with a context menu -->
+	<div contextmenu="popup-menu">
+	  Right-click to see the adjusted context menu
+	</div>
+
+	<h2 contextmenu="popup-menu">Clique aqui</h2>
+
+	<menu type="context" id="popup-menu">
+	  <menuitem type="checkbox" onclick="toggleOption()" checked="true">Checkbox</menuitem>
+	  <menuitem type="command" label="Command" icon="icon.png" onclick="doSomething()">Checkbox</menuitem>
+	  <menuitem type="radio" name="group1" onclick="option()" checked="true">Radio button 1</menuitem>
+	  <menuitem type="radio" name="group1" onclick="option()">Radio button 2</menuitem>
+	</menu>
+
+</body>
+</html>

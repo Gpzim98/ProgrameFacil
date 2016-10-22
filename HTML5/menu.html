@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		div {
+  width: 300px;
+  height: 80px;
+  background-color: lightgreen;
+}
+	</style>
+</head>
+<body>
+
+<div style="background:yellow;border:1px solid #cccccc;padding: 10px;" contextmenu="mymenu">
+<p>Right-click inside this box to see the context menu!</p>
+
+<menu type="context" id="mymenu">
+  <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+  <menu label="Share on...">
+    <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+    <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+  </menu>
+  <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+</menu>
+
+</div>
+
+<p>This example currently only works in Firefox!</p>
+
+
+<br>
+<br>
+<!-- A <div> element with a context menu -->
+<div contextmenu="popup-menu">
+  Right-click to see the adjusted context menu
+</div>
+
+<menu type="context" id="popup-menu">
+  <menuitem type="checkbox" onclick="toggleOption()" checked="true">Checkbox</menuitem>
+  <menuitem type="command" label="Command" icon="icon.png" onclick="doSomething()">Checkbox</menuitem>
+  <menuitem type="radio" name="group1" onclick="option()" checked="true">Radio button 1</menuitem>
+  <menuitem type="radio" name="group1" onclick="option()">Radio button 2</menuitem>
+</menu>
+
+</body>
+</html>
+

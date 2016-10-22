@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function ler(){
+			if (typeof(Storage) !== "undefined") {
+				document.getElementById("resultado").innerHTML = localStorage.getItem("projeto");
+
+			} else {
+				alert('Navegador sem suporte a Web Storage')
+			}
+		}
+
+		function save(){
+			if (typeof(Storage) !== "undefined") {
+				localStorage.setItem("projeto", "Programe Facil");
+				sessionStorage.setItem("projeto1", "Programe Facilsss");
+				alert('Item salvo com sucesso')	
+			} else {
+				alert('Navegador sem suporte a Web Storage')
+			}
+		}
+	</script>
+</head>
+<body>
+	<p id="resultado"></p>
+
+	<button onclick="save()">Salvar</button>
+	<button onclick="ler()">Ler</button>
+
+</body>
+</html>

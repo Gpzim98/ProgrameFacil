@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+    <script type="text/javascript">
+            function incrementa(){
+                document.getElementById('nota').value += 10;
+            }
+
+            function decrementa(){
+                document.getElementById('nota').value -= 10;
+            }
+
+    </script>
+</head>
+<body>
+
+<form method="GET" action="#">
+
+    <fieldset>
+        <legend>Dados pessoais</legend>
+        <label for="radio">Click me</label>
+        <input type="radio" id="radio" name="click"> 
+        <input type="radio" id="id2" name="click"> 
+
+
+        <input type="text" name="nome" placeholder="Digite seu nome aqui">
+      </fieldset>
+
+	
+    <input list="browsers" />
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Internet Explorer">
+        <option value="Internet Explorer 2 ">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    <select name="select">
+      <option value="valor1">Valor 1</option> 
+      <option value="valor2" selected>Valor 2</option>
+      <option value="valor3">Valor 3</option>
+    </select>
+
+    <br>
+    <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+
+    <br>
+
+    0<input type="range" name="b" value="50" />100 +<input type="number" name="a" value="10" /> =
+    <output name="result">110</output>
+
+    <br>
+
+    <progress value="0" max="100" id="nota">70 %</progress>
+    <button onclick="incrementa()">Incrementa</button>
+    <button onclick="decrementa()">Decrementa</button>
+
+    <br>
+
+   
+    <h1 onmouseleave="decrementa()" onmouseover="incrementa()">Decrementa</h1>
+
+    <br>
+
+    <input type="checkbox" name="my_checkbox"><br>
+    <input type="checkbox" name="my_checkbox"><br>
+    <input type="color" name="color"><br>
+    <input type="date" name="date"><br>
+    <input type="datetime" name="datetime"><br>
+
+    Birthday: <input type="date" name="bday">
+    
+    <br>
+    Birthday (date and time): <input type="datetime-local" name="bdaytime">
+
+    <br>
+
+    Select a file: <input type="file" name="img">
+
+    <br>
+
+    Birthday (month and year): <input type="month" name="bdaymonth">
+
+    <br>
+
+    <input type="password" name="pwd">
+
+    <br>
+
+    <input type="range" name="points" min="0" max="10">
+
+    E-mail: <input type="email" name="usremail">
+
+<br>
+
+<input type="reset">
+
+
+    <button type="submit">Enviar</button>
+</form>
+
+
+</body>
+</html>

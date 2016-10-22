@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		/* Seletor universal*/
+		* {
+			font-weight: bold;
+		}
+
+		/* Seletor do tipo atributo ou seletor de tipo*/
+		h1 {
+			color: green;
+		}
+
+		/* Seletor do tipo classe*/
+		.meuTituloComClass {
+			color: blue;
+		}
+
+		/* Seletor do tipo ID */
+		#meuTituloComID{
+			color: yellow;
+		}
+
+		/* Seleciona elementos desabilitados */
+		[disabled] {
+			color: grey;
+		}
+
+		/* Seleciona elementos setados para Espanhol */
+		[lang|=es] {
+			color: red;
+		}
+
+		/* Seleciona elementos do tipo button */
+		[type='button'] {
+			background-color: green;
+		}
+
+		/* Seleciona elementos do tipo text */
+		[type='text'] {
+			background-color: blue;
+		}
+
+		/* Seleciona elementos com a classe key, é o mesmo que .key */
+		[class$=key] {
+			color: yellow;
+		}
+
+		/*
+			~ exato
+			* contem
+			$ termina com
+			^ começa com
+		*/
+
+		/*Seleciona elementos com titulo que contem a palavra exemple*/
+		[title~="Example" i] {
+			color: red;
+		}
+
+		/*Seleciona todos os links*/
+		a {
+			color: green;
+		}
+
+		/* Seleciona todos os links do tipo HTTPS*/
+		a[href^="https://"] {
+			color: blue;
+		}
+
+		/* Seleciona todas as imagens com extensão .png*/
+		img[src$=".png"] {
+			transform: rotate(110deg);	
+		}
+
+		/* Selecionando um stado via pseudo elemento*/	
+		[type="text"]:active {
+			background-color: pink;
+		}
+
+		/* */
+		img[src$=".png"]:hover {
+			transform: rotate(150deg);	
+		}
+
+		li:first-child, li:last-child {
+			color:yellow;
+		}
+
+		p:last-of-type {
+			font-size: 50px;
+		}
+
+		p.meuTituloComClass {
+			font-size: 14px;
+		}
+
+		.c1, .c2 {
+			color: pink;
+			font-size: 20;
+			border: 1px solid;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Titulo selecionado pela tipo da tag</h1>
+	
+	<h1 class="meuTituloComClass">Titulo selecionado pela classe</h1>
+	<h1 id="meuTituloComID">Titulo selecionado pelo ID</h1>
+	<h1 disabled>Titulo selecionado por estar desabilitado</h1>
+	
+	<h1 lang="es">Titulo selecionado pois esta setado para idioma Espanhol</h1>
+	<h1>O botão selecionado pelo seletor type</h1>
+	
+	<input type="button" name="botao" value="clique">
+	
+	<input type="text" name="botao" value="clique">
+	
+	<h1 class="aadfkey">Selecionado pela class via class~='key'</h1>
+	
+	<h1 title="example">Selecionado via conteudo de title</h1>
+	<a href="http://www.programefacil.com.br">Sou um link</a><br>
+	<a href="https://www.programefacil.com.br">Sou um link HTTPs</a><br>
+	<img src="paleta.png" width="100" height="png"><br>
+	<label for="texto">Meu input de texto</label>
+	<input type="text" name="Meu input de texto" id="texto">
+
+	<ul>
+		<li>Primeiro item</li>
+		<li>Segundo Item</li>
+		<li>Último item</li>
+	</ul>
+
+	<div>
+		<p>Primeiro paragrafo, nao sera atingido</p>
+		<p>Segundo paragrafo, nao sera atingido</p>
+		<p>Quarto paragrafo, sera atingido</p>
+	</div>
+
+	<p class="meuTituloComClass"> Paragrafo com uma classe repetida</p>
+
+	<p class="c1 meuTituloComClass">Sou um paragrafo</p>
+	<h1 class="c2">Sou um titulo</h1>
+</body>
+</html>

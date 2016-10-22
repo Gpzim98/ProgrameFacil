@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function salvar(){
+			if (typeof(Storage) !== "undefined") {
+				localStorage.setItem("nome", "Programe Facil");
+				localStorage.setItem("carreiras", "Front, back e Full stack");
+				sessionStorage.setItem("carreiras", "Front, back e Full stack");
+			} else {
+			    alert('Seu navegador não suporta Web Storage');
+			}
+		}
+
+		function ler(){
+			if (typeof(Storage) !== "undefined") {
+				document.getElementById("resultado").innerHTML = localStorage.getItem("carreiras");
+			} else {
+			    alert('Seu navegador não suporta Web Storage');
+			}
+		}
+
+		function remover(){
+			if (typeof(Storage) !== "undefined") {
+				localStorage.removeItem("nome");
+			} else {
+			    alert('Seu navegador não suporta Web Storage');
+			}
+		}			
+	</script>
+</head>
+<body>
+	<div id="resultado"></div>
+
+	<button onclick="salvar()">Salvar</button>
+	<button onclick="ler()">Ler</button>
+	<button onclick="remover()">Remover</button>
+</body>
+</html>
