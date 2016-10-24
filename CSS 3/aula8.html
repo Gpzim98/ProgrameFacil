@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		ul {
+			list-style: url('icon.png');
+		}
+
+		ol {
+			list-style: lower-latin;
+		}
+
+		body {
+			counter-reset: mynum;
+		} 
+
+		p.numbered:before {
+		  content: counter(mynum) "= ";
+		  counter-increment: mynum; 
+		}
+	</style>
+
+</head>
+<body>
+	<h2>Lista nao ordenada</h2>
+	<ul>
+		<li>list item 1</li>
+		<li>list item 2</li>
+		<li>list item 3</li>
+		<li>list item 4</li>
+	</ul>
+
+	<ol>
+		<li>list item 1</li>
+		<li>list item 2</li>
+		<li>list item 3</li>
+		<li>list item 4</li>
+	</ol>
+
+	<p class = "numbered"> Lorem ipsum </ p> 
+	<p class = "numbered"> dolor sit </ p> 
+	<p class = "numbered"> Amet consectetuer </ p> 
+	<p class = "numbered"> Magna aliquam </ p> 
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+	<p class = "numbered"> Autem veleum </ p>
+</body>
+</html>
