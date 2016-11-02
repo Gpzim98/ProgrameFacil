@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<HTML>
+  <meta charset="utf-8">
+
+<HEAD>
+<TITLE>Documento de amostra 3</TITLE>
+<style type="text/css">
+
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #efe;
+  border-collapse: collapse;
+  empty-cells: show;
+  border: 1px solid #7a7;
+  }
+
+#demo-table > caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 200%;
+  border-bottom: .2em solid #4ca;
+  margin-bottom: .5em;
+  }
+
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: right;
+  padding-right: .5em;
+  }
+
+#demo-table th {
+  font-weight: bold;
+  padding-left: .5em;
+  }
+
+
+/* header */
+#demo-table > thead > tr:first-child > th {
+  text-align: center;
+  color: blue;
+  }
+
+#demo-table > thead > tr + tr > th {
+  font-style: italic;
+  color: gray;
+  }
+
+/* fix size of superscript */
+#demo-table sup {
+  font-size: 75%;
+  }
+
+/* body */
+#demo-table td {
+  background-color: #cef;
+  padding:.5em .5em .5em 3em;
+  }
+
+#demo-table tbody th:after {
+  content: ":";
+  }
+
+
+/* footer */
+#demo-table tfoot {
+  font-weight: bold;
+  }
+
+#demo-table tfoot th {
+  color: blue;
+  }
+
+#demo-table tfoot th:after {
+  content: ":";
+  }
+
+#demo-table > tfoot td {
+  background-color: #cee;
+  }
+
+#demo-table > tfoot > tr:first-child td {
+  border-top: .2em solid #7a7;
+  }
+
+</style>
+</HEAD>
+<BODY>
+
+<TABLE id="demo-table">
+<CAPTION>Oceanos</CAPTION>
+
+<THEAD>
+	<TR>
+		<TH></TH>
+		<TH>Área</TH>
+		<TH>Profundidade Média</TH>
+	</TR>
+		<TR>
+		<TH></TH>
+		<TH>milhões de km<SUP>2</SUP></TH>
+		<TH>m</TH>
+	</TR>
+</THEAD>
+
+<TBODY>
+	<TR>
+	<TH>Ártico</TH>
+		<TD>13,000</TD>
+		<TD>1,200</TD>
+	</TR>
+	<TR>
+	<TH>Atlântico</TH>
+		<TD>87,000</TD>
+		<TD>3,900</TD>
+	</TR>
+	<TR>
+	<TH>Pacífico</TH>
+		<TD>180,000</TD>
+		<TD>4,000</TD>
+	</TR>
+	<TR>
+	<TH>Índico</TH>
+		<TD>75,000</TD>
+		<TD>3,900</TD>
+	</TR>
+	<TR>
+	<TH>Antártico</TH>
+		<TD>20,000</TD>
+		<TD>4,500</TD>
+	</TR>
+</TBODY>
+
+<TFOOT>
+	<TR>
+	<TH>Total</TH>
+		<TD>361,000</TD>
+		<TD></TD>
+	</TR>
+	<TR>
+		<TH>Média</TH>
+		<TD>72,000</TD>
+		<TD>3,800</TD>
+	</TR>
+</TFOOT>
+
+</TABLE>
+   
+</BODY>
+</HTML>
