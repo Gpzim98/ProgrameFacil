@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#example1 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url(paleta.png);
+    background-repeat: no-repeat;
+}
+
+#example2 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url(paleta.png);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+
+#example3 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url(paleta.png);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+</style>
+</head>
+<body>
+
+    <p>No background-origin (padding-box is default):</p>
+    <div id="example1">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <p>background-origin: border-box:</p>
+    <div id="example2">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <p>background-origin: content-box:</p>
+    <div id="example3">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+</body>
+</html>
+

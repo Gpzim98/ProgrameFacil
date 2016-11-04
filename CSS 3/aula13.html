@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    top: -5px;
+    left: 105%; 
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+
+<body>
+
+    <div class="tooltip">Passe o mouse
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+
+</body>
+</html>
+
