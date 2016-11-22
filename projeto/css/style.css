@@ -1,0 +1,53 @@
+header {
+	float: left;
+	background-color: #79BD9A;
+	width: 100%;
+	clear: both;
+}
+
+header p {
+	float: right;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #FFF;
+	background: #0B486B;
+	padding: 20px 5px;
+}
+
+
+#logo{
+	float: left;
+	width: 20%;
+	height: 20%;
+	display: block;
+
+}
+
+nav {
+	float: right;
+	padding: 20px;	
+}
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url(../img/menu-icon.png) center;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+}

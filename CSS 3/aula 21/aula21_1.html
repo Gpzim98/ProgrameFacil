@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<style type="text/css">
-		#div1 {
-		    transform: translate(50px, 300px);
-		}
+<style>
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
 
-		#div2 {
-		    transform: rotate(-10deg);
-		}
+div#myDiv {
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(50deg); /* Standard syntax */
+}
 
-		#div3 {
-   			transform: scale(1, 1.9);
-   			transform: skew(20deg, 10deg);
-		}
-	</style>
+#div1 {
+	    transform: scale(2, 3);
+	       transform: skewX(30deg);
+
+}
+</style>
 </head>
 <body>
 
-	<div id="div1">
-		<h1>Tag translate	</h1>
-	</div>
+<div>
+This a normal div element.
+</div>
 
-	<div id="div2">
-		<h1>Tag rotate</h1>
-	</div>
+<div id="myDiv">
+The rotate() method rotates an element clockwise or counter-clockwise. This div element is rotated clockwise 20 degrees.
+</div>
 
-	<div id="div3">
-		<h1>Tag scale</h1>
-	</div>
+<div id="div1">
+	<h1>Scale</h1>
+</div>
+
 </body>
 </html>
+

@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-
-    <style>
-    .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-content a:hover {background-color: #f1f1f1}
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-</style>
-</head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <body>
 
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+<div class="w3-panel w3-red">
+  <p>I am a panel.</p>
+</div> 
+
+<div class="w3-container">
+  <h2>Card Content</h2>
+  <p>Add containers inside the card to create different sections:</p>
+
+  <div class="w3-card-4" style="width:50%;">
+    <header class="w3-container w3-blue">
+      <h1>Header</h1>
+    </header>
+
+    <div class="w3-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <footer class="w3-container w3-blue">
+      <h5>Footer</h5>
+    </footer>
   </div>
+</div>
+
+<button class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge">Button</button>
+
+<div class="w3-card-8 test w3-dark-grey" style="width:50%;max-width:400px">
+
+<div class="w3-container w3-center">
+  <h3>Friend Request</h3>
+  <img src="img_avatar3.png" alt="Avatar" style="width:80%">
+  <h4>John Doe</h4>
+  <br>
+
+<button class="w3-btn w3-green w3-padding-8" style="width:49%">Accept</button>
+<button class="w3-btn w3-red w3-padding-8" style="width:49%">Decline</button><br><br>
+</div>
 </div>
 
 </body>
 </html>
+
