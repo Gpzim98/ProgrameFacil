@@ -1,0 +1,186 @@
+body {
+	font-family: Helvetica, Arial;
+	color: #36393c;
+}
+
+header {
+	float: left;
+	background-color: #79BD9A;
+	width: 100%;
+}
+
+header p {
+	float: right;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+/*
+a:hover {
+	color: #CFF09E;
+	background: #0B486B;
+	padding: 20px 5px;
+}
+*/
+
+#logo{
+	float: left;
+	width: 40%;
+	height: 70%;
+	display: block;
+}
+
+nav {
+	float: right;
+	padding: 20px;	
+}
+
+#menu-icon {
+	display: hidden;
+	width: 50px;
+	height: 50px;
+	background: url(../img/menu-icon.png) center;
+}
+
+ul {list-style: none;}
+
+li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+}
+	
+footer {
+	background-color: #3B8686;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	clear: both;
+}
+
+
+section h2 {
+	text-align: center;
+}
+
+
+/*MEDIA QUERY iPhone 5*/
+@media only screen and (max-width : 480px) {
+	#menu-icon {
+		display:inline-block;
+	}
+
+	nav ul{ 
+		display: none;
+		position: absolute;
+		right: 20px;
+		top: 60px;
+		padding: 20px;
+		background: #fff;
+		width: 20%;
+	}
+
+	nav li {
+		text-align: left;
+		width: 100%;
+		padding: 10px 0px;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+
+	nav li a {
+		color: #3B8686;
+	}
+
+	nav:hover ul{
+		display: block;
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	.depoimentos {
+    		box-shadow: 10px 10px 5px #888888;
+    		border-radius: 5px;
+    		width: 95%;
+    		padding-right: 10px;
+	}
+
+	nav#nav-footer {
+		display: none;
+	}
+
+	#copyright p {
+		text-align: center;
+	}
+
+	#slogan {
+		margin-right: 10px;
+		font-weight: bold;
+		letter-spacing: 4px;
+	}	
+}
+
+
+/*MEDIA QUERY iPed*/
+@media only screen and (min-width : 481px) {
+	#menu-icon {
+		display: hidden;
+	}
+
+	body {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	header {
+		height: 200px;
+	}
+
+	section {
+		height: 250px;
+		clear: both;
+	}
+
+	#prom1, #prom2 {
+		width: 48%;
+		float: left;
+		margin-left:  10px;
+	}
+
+	#gerais1, #gerais2, #gerais3 {
+		float: left;
+		width: 32%;
+		margin-left:  10px;
+	}
+
+	#gerais2 img {
+		margin-left: 23%;
+	}
+
+	.depoimentos {
+		box-shadow: 10px 10px 5px #888888;
+    		border-radius: 5px;
+		width: 47%;
+		float: left;
+		margin: 0 0 15px 15px;
+	}
+
+	footer {
+		height: 200px;
+		clear: both;
+	}
+
+	#slogan {
+		margin-right: 10px;
+		font-weight: bold;
+		letter-spacing: 7px;
+	}
+}
