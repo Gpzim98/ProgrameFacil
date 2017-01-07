@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var lista = ['João', 'Maria', 'José']
+
+	for (item in lista){
+		console.log( lista[item] );
+	}
+
+	for (item of lista){
+		console.log(item);
+	}
+
+	var lista3 = [ {nome: 'Fulano', idade: 28, salario: 500}, 
+		        {nome: 'Ciclano', idade: 29, salario: 600}]
+
+	for (item of lista3){
+		console.log(item.nome + ' - ' + item.idade + ' - ' + item.salario);
+	}
+
+/*	for (letra of 'Curso de Programação'){
+		console.log(letra);
+	}
+*/
+	var str = 'Curso de Programação';
+	for (var i=0; i< str.length; i++){
+		console.log(str[i]);
+	}
+</script>
+</body>
+</html>

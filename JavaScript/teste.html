@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var varGlob = 10;
+
+    function dobro(num){
+      return num*2;
+    }
+
+    document.write('<br>' + dobro(2));
+
+    var x = function(num){
+      return num / 2;
+    }
+
+    document.write('<br>' + x(10));
+
+    var z = function mais2(num){
+      return num + 2;
+    }
+
+    document.write('<br>' + z(10));
+
+    var a = (num) => {
+      return num - 2;
+    }
+
+    document.write('<br>' + a(10));
+    
+    function acessaEscopo(){
+      local = 'x';
+      document.write('<br> Global: ' + varGlob);
+
+      function funcaoLocal(){
+        document.write('<br> Local loca: ' + local);
+      }
+
+      funcaoLocal();
+    }
+
+    acessaEscopo();
+    document.write('<br> Local: ' + local);
+
+
+</script>
+
+</body>
+</html>

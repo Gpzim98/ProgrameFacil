@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*for(var i=0; i<10; i++){
+		if(i===7)
+		    break;
+		console.log(i);
+	}*/
+
+
+	var x = 0;
+	var z = 0
+	
+	labelCancelaLaco: while (true) {
+	    console.log("Laço exterior: " + x);
+                    x += 1;
+                    z = 1;
+                    
+                    while (true) {
+                        console.log("Laço interior: " + z);
+                        z += 1;
+                        if (z === 10 && x === 10) {
+                          break labelCancelaLaco;
+                        } else if (z === 10) {
+                          break;
+                        }
+                   }
+	}
+</script>
+</body>
+</html>
