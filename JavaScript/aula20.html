@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function myConcat(separador) {
+	   var result = "", i;
+	   
+	   // itera por meio de argumentos
+	   for (i = 1; i < arguments.length; i++) {
+	      result += arguments[i] + separador;
+	   }
+	   return document.write(result);
+	}
+
+	myConcat(", ", "red", "orange", "blue");
+
+	function multiplicar(a, b = 1) {
+	  return a*b;
+	}
+
+	document.write(multiplicar(5));
+</script>
+</body>
+</html>
