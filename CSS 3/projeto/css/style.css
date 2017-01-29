@@ -153,12 +153,15 @@ section h2 {
 		width: 48%;
 		float: left;
 		margin-left:  10px;
+		border: 1px solid #ccc;
 	}
 
 	#gerais1, #gerais2, #gerais3 {
 		float: left;
 		width: 32%;
 		margin-left:  10px;
+		border: 1px solid #ccc;
+		height: 320px;
 	}
 
 	#gerais2 img {
@@ -166,9 +169,9 @@ section h2 {
 	}
 
 	.depoimentos {
-		box-shadow: 10px 10px 5px #888888;
+		box-shadow: 3px 3px 3px #888888;
     		border-radius: 5px;
-		width: 47%;
+		width: 48.4%;
 		float: left;
 		margin: 0 0 15px 15px;
 	}
@@ -182,5 +185,45 @@ section h2 {
 		margin-right: 10px;
 		font-weight: bold;
 		letter-spacing: 7px;
+	}
+}
+
+/*MEDIA QUERY Pc*/
+@media only screen and (min-width : 960px) {
+	body {
+		width: 960px;
+	}
+
+	input[type=text], textarea {
+	    width: 100%;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: inline-block;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	    box-sizing: border-box;
+	}
+
+	#contato {
+		width: 100%;
+		float: left;
+		clear: both;
+		height: auto;
+	}
+
+	#informacoes {
+		width: 100%;
+		clear: both;0
+		float: right;
+	}
+
+	#detalhes {
+		width: 70%;
+		float: right;
+	}
+
+	#map {
+		width: 25%;
+		float: left;
 	}
 }
