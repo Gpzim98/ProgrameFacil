@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from .views import home, clientes, cliente_detalhe, cliente_por_nome
+from .views import home
+from clientes.views import clientes, cliente_detalhe, cliente_por_nome
 
 urlpatterns = [
     url(r'^$', home),
