@@ -1,0 +1,33 @@
+<h1>Ola mundo</h1>
+
+<ul>
+    <li>item 2</li>
+    <li>item 2</li>
+    <li>item 2</li>
+    <li>item 2</li>
+</ul>
+<p>Condicionais </p>
+{% if sexo == 'm' or sexo == 'M' %}
+    Ola senhor {{ nome }}
+{% elif sexo == 'f' %}
+    Ola senhora {{ nome}}
+{% else %}
+    Ola {{ nome }}
+{% endif %}
+<br>
+<br>
+<p>Loops </p>
+
+<ul>
+    {% for pessoa in lista %}
+
+        {% if pessoa.sexo == 'm' or pessoa.sexo == 'M' %}
+            <li>Ola senhor {{ pessoa.nome }}</li>
+        {% elif pessoa.sexo == 'f' %}
+            <li>Ola senhora {{ pessoa.nome}}</li>
+        {% else %}
+            <li>Ola {{ pessoa.nome }}</li>>
+        {% endif %}
+
+    {% endfor %}
+</ul>
