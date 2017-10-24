@@ -7,7 +7,6 @@ from .models import Empregado, Telefone, CPF, Departamento
 # search_fields
 
 class EmpregadoAdmin(admin.ModelAdmin):
-    fields = ('nome', 'endereco')
     list_display = ('id', 'nome', 'endereco', 'email')
     list_filter = ('departamentos', )
     search_fields = ('id', 'nome', 'email', 'departamentos__nome')

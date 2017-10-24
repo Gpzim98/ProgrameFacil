@@ -25,6 +25,7 @@ class Empregado(models.Model):
     email = models.EmailField()
     cpf = models.OneToOneField(CPF, blank=True, null=True)
     departamentos = models.ManyToManyField(Departamento, blank=True)
+    foto = models.ImageField(upload_to='cliente_fotos')
 
     def __str__(self):
         return self.nome
