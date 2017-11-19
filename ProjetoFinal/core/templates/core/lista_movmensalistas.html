@@ -1,0 +1,8 @@
+<h2>Lista Movimentos Rotativos</h2>
+
+
+<ul>
+{% for mov in mov_mensalistas %}
+    <li> {{ mov.mensalista }} - {{ mov.dt_pgto }} </li>
+{% endfor %}
+</ul>
