@@ -1,0 +1,58 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block menu %}
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'website_servicos' %}">Servicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Plano</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="{% url 'website_contato' %}">Contatos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core_home' %}">Sistema</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block main %}
+<div class="row row-space">
+    <div class="col-12">
+            Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat. 
+            Praesent lacinia ultrices consectetur. Sed non ipsum felis. Viva Forevis aptent taciti sociosqu ad litora torquent. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Delegadis gente finis, bibendum egestas augue arcu ut est.
+
+            Paisis, filhis, espiritis santis. Todo mundo vê os porris que eu tomo, 
+            mas ninguém vê os tombis que eu levo! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Casamentiss faiz malandris se pirulitá.
+            
+            Aenean aliquam molestie leo, vitae iaculis nisl. Per aumento de cachacis, 
+            eu reclamis. Atirei o pau no gatis, per gatis num morreus. Quem manda na minha terra sou euzis!
+            
+            Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? 
+            Toma um mé que o mundo vai girarzis! Posuere libero varius. Nullam a nisl ut 
+            ante blandit hendrerit. Aenean sit amet nisi. Diuretics paradis num copo é motivis de denguis.  
+    </div>
+</div>
+
+<div class="row row-space">
+    <div class="col-6">
+        <img src="{% static 'img/car.jpeg' %}" alt="Minha imagem">
+    </div>
+    <div class="col-6">
+        <img src="{% static 'img/car.jpeg' %}" alt="Minha imagem">
+    </div>
+</div>
+{% endblock %}

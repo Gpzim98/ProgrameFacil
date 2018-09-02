@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h2>Updating MovRotativo: {{ mov_rotativo }}</h2>
+
+
+<form action="{% url 'core_movrotativos_update' mov_rotativo.id %}" method="POST">
+        {% csrf_token %}
+    
+        {{ form.as_p }}
+    
+        <button type="submit">Salvar</button>
+</form>
+
+<a href="{% url 'core_movrotativos_delete' mov_rotativo.id%}">Delete</a>
+
+{% endblock %}

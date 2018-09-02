@@ -1,8 +1,75 @@
-<h2>Lista veiculos</h2>
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block menu%}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'core_home' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+        <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicos</a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'core_lista_pessoas' %}">Pessoas</a>
+            <a class="dropdown-item active" href="{% url 'core_lista_veiculos' %}">Veiculos</a>
+            <a class="dropdown-item" href="{% url 'core_movrotativos_novo' %}">Rotativo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'core_mensalista_novo' %}">Mensalistas</a>
+            </div>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+                <a class="nav-link disabled" href="">Ola, {{ user }}</a>
+        </li>
+
+        <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        </li>
+    {% else %}
+    <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+    </li>
+    {% endif %}
+    </ul>
+{% endblock %}
+
+{% block main %}
+
+<div class="row">
+    <div class="col">
+        <h2>Lista veiculos</h2>
+
+        <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Proprietario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for veiculo in veiculos %}
+                    <tr>
+                    <th scope="row">{{ veiculo.id }}</th>
+                    <td>{{ veiculo.marca }}</td>
+                    <td>{{ veiculo.placa }}</td>
+                    <td>{{ veiculo.proprietario }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
 
-<ul>
-{% for veiculo in veiculos %}
-    <li> {{ veiculo.placa }} </li>
-{% endfor %}
-</ul>
+        <form action="{% url 'core_veiculo_novo' %}" method="POST">
+            {% csrf_token %}
+
+            {{ form|bootstrap }}
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,8 +1,49 @@
-<h2>Lista Movimentos Rotativos</h2>
+{% extends 'base.html' %}
+
+{% block menu%}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'core_home' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+        <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicos</a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'core_lista_pessoas' %}">Pessoas</a>
+            <a class="dropdown-item" href="{% url 'core_lista_veiculos' %}">Veiculos</a>
+            <a class="dropdown-item active" href="{% url 'core_movrotativos_novo' %}">Rotativo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'core_mensalista_novo' %}">Mensalistas</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Logout</a>
+        </li>
+    </ul>
+{% endblock %}
 
 
-<ul>
-{% for mov in mov_rot %}
-    <li> {{ mov.checkin }} - {{ mov.veiculo.placa }} </li>
-{% endfor %}
-</ul>
+{% block main %}
+    <h2>Lista Movimentos Rotativos</h2>
+
+
+    <ul>
+    {% for mov in mov_rot %}
+        <li> 
+            <a href="{% url 'core_movrotativos_update' mov.id %}">
+                {{ mov.checkin }} - {{ mov.veiculo.placa }}  
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+
+    <form action="{% url 'core_movrotativos_novo' %}" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+{% endblock %}
