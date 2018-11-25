@@ -60,6 +60,9 @@
                 </tbody>
             </table>
 
+    <a class="btn btn-info" href="{% url 'relatorio_pdf' %}">Relatorio PDF</a>
+    <a class="btn btn-info" href="{% url 'relatorio_csv' %}">Relatorio CSV</a>
+
 
         <form action="{% url 'core_veiculo_novo' %}" method="POST">
             {% csrf_token %}

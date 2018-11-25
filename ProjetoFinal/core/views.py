@@ -1,5 +1,8 @@
+import csv
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+
 from .models import (
     Pessoa, 
     Veiculo,
@@ -212,3 +215,55 @@ def movmensalista_delete(request, id):
         return render(request, 'core/delete_confirm.html', {'obj': mov_mensalista})
 
 
+from django.http import HttpResponse
+from django.template.loader import get_template
+import xhtml2pdf.pisa as pisa
+import io
+from django.views.generic.base import View
+
+
+class Render:
+    @staticmethod
+    def render(path: str, params: dict, filename: str):
+        template = get_template(path)
+        html = template.render(params)
+        response = io.BytesIO()
+        pdf = pisa.pisaDocument(
+            io.BytesIO(html.encode("UTF-8")), response)
+        if not pdf.err:
+            response = HttpResponse(
+                response.getvalue(), content_type='application/pdf')
+            response['Content-Disposition'] = 'attachment;filename=%s.pdf' % filename
+            return response
+        else:
+            return HttpResponse("Error Rendering PDF", status=400)
+
+
+class Pdf(View):
+
+    def get(self, request):
+        veiculos = Veiculo.objects.all()
+        params = {
+            'veiculos': veiculos,
+            'request': request,
+        }
+        return Render.render('core/relatorio.html', params, 'relatorio_veiculos')
+
+
+class ExportarParaCSV(View):
+    def get(self, request):
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="somefilename.csv"'
+
+        veiculos = Veiculo.objects.all()
+
+        writer = csv.writer(response)
+        writer.writerow(['Id', 'Marca', 'placa', 'Proprietario', 'Cor'])
+
+        for veiculo in veiculos:
+            writer.writerow(
+                [veiculo.id, veiculo.marca, veiculo.placa, veiculo.proprietario,
+                 veiculo.cor
+                 ])
+
+        return response

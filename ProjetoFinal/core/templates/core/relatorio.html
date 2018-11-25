@@ -1,0 +1,24 @@
+<style>
+    .test {
+        color: red;
+    }
+</style>
+
+<h1 class="test">Relatorio de veiculos</h1>
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Marca</td>
+    <td>Placa</td>
+    <td>Proprietario</td>
+  </tr>
+
+  {% for veiculo in veiculos %}
+      <tr>
+        <td>{{ veiculo.id }}</td>
+        <td>{{ veiculo.marca }}</td>
+        <td>{{ veiculo.placa }}</td>
+        <td>{{ veiculo.proprietario }}</td>
+      </tr>
+  {% endfor %}
+</table>

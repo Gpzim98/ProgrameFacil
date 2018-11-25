@@ -5,3 +5,4 @@ python-decouple==3.1
 pytz==2018.4
 static3==0.7.0
 django-bootstrap-form
+xhtml2pdf
